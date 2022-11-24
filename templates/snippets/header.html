@@ -1,0 +1,34 @@
+<div id="cabecalho">
+	<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+		<div class="navbar-header" style=" margin-right: auto;">
+			<a class="nav-brand">
+				{% load static %}
+				<img class="img-fluid logo" id="logo_mobile" src="{% static 'images/LOGO_COLORIDO.png' %}" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCampo"
+				aria-controls="navbarCampo" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse" id="navbarCampo">
+			<span class="hidden-xs">
+				{% load static %}
+				<img class=" img-fluid logo" src="{% static 'images/LOGO_COLORIDO.png' %}" />
+			</span>
+			<ul class="navbar-nav nav nav-pills nav-fill nav-justified">
+				<li class="nav-item">
+					<a class="nav-link" href="#Banner">INÍCIO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#Produtos">PRODUTOS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#Historia">HISTÓRIA</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#Footer">CONTATO</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>

@@ -1,0 +1,147 @@
+<style type="text/css">
+	.footer {
+		min-height: 100px;
+	}
+</style>
+
+<section id="Footer">
+	<footer style="background: black;  position: absolute; width: 100%; color: white; ">
+		<header class="mx-auto" style="text-align: center; background: black; border-bottom: solid 1px white;">
+			<div class="row-footer" style="z-index: 999;">
+				<p style="font-size: 30px; ">
+					<a href="https://www.facebook.com/arrozefeijaocampofino/" style="margin: 2%; color: white;"
+						target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://web.whatsapp.com/send?phone=551733414040" style="margin: 2%; color: white;" target="_blank"><i
+							class="fa fa-whatsapp" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/arrozcampofino/" style="margin: 2%; color: white;"
+						target="_blank"><i class="instagram fa fa-instagram " aria-hidden="true"></i></a>
+
+				</p>
+			</div>
+		</header>
+		<div class="container" style="max-width: 1280px;">
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-md-4 col-12 d-flex justify-content-center align-self-center text-center mb-md-0 mb-3">
+					<div style="font-size: medium;">
+						<h3>Contato</h3>
+						<p>Rodovia Brigadeiro Faria Lima, Km 404<br>
+							Marginal Pista Sul<br>
+							Zona rural, Colina - SP<br>
+							CEP: 14770-000<br>
+							<i class="fa fa-phone" aria-hidden="true"></i>(17) 3341-4040<br>
+							<i class="fa fa-envelope" aria-hidden="true"><a style="font-size: 85%;"
+									href="mailto:campofinoalimentos@gmail.com">
+									campofinoalimentos@gmail.com</a></i></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-12 d-flex justify-content-center align-self-center text-center mb-md-0 mb-3">
+					<div>
+						{% load static %}
+						<img src="{% static 'images/LOGO_PRETO.png' %}" class="img-fluid mx-auto d-block" style="padding: 10%;">
+						<h2>Campo Fino Alimentos</h2>
+						<h3>Campo Fino Indústria de Importação e Exportação de Alimentos EL</h3>
+
+					</div>
+				</div>
+				<div class="col-md-4 col-12 d-flex justify-content-center align-self-center text-center mb-md-0 mb-3">
+					<div id="map-container-google-2">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12552.219459415028!2d-48.53365524571935!3d-20.71845935235724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQzJzA4LjEiUyA0OMKwMzEnMzEuNCJX!5e0!3m2!1spt-BR!2sbr!4v1588038513485!5m2!1spt-BR!2sbr"
+							width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+							aria-hidden="false" tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<p style="text-align: center;">© Copyright {% now 'Y' %}, Nine BC Dev Group ME</p>
+			</div>
+	</footer>
+</section>
+
+<script src="https://kit.fontawesome.com/0c223b2ea3.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-3.3.0.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+	$('.navbar-toggler').on('click', function () {
+		console.log($('.collapse'));
+		if ($('.collapse').hasClass('show')) {
+			$('.collapse').removeClass('show');
+			$('#logo_mobile').removeClass('top-nav-collapse-logo');
+		} else {
+			$('.collapse').addClass('show');
+			$('#logo_mobile').addClass('top-nav-collapse-logo');
+		}
+	});
+	$('.nav-link').on('click', function(){
+		$('.navbar-toggler').click();
+	})
+</script>
+<script>
+    $(document).ready(function () {
+        $('.mySCarousel').slick({
+            autoplay: true,
+            speed: 2000
+        });
+
+        $(".slick-produtos").slick({
+            centerMode: true,
+            focusOnSelect: true,
+            // autoplay: true,
+            speed: 500,
+            dots: true,
+            asNavFor: '.slick-produtos-descricao',
+            centerPadding: '60px',
+            slidesToShow: 3,
+            arros: true,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: true,
+                        centerMode: true
+
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        slidesToScroll: 1,
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        arrows: true,
+                        centerMode: true
+                    }
+                }
+            ]
+        });
+
+        $('.slick-produtos-descricao').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slick-produtos'
+        });
+
+    });
+</script>
+<script>
+function showMore() {
+	//remove o link
+	$('#link').remove();
+	//Mostra o conteúdo #more
+	$('#more').removeClass('hidden-xs');
+}
+</script>
